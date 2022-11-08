@@ -1,5 +1,19 @@
+#title {
+
+    color: white;
+
+}
+
 html {
 
     background-color: rgb(75, 0, 75);
+
+}
+
+.center {
+
+    display: flex;
+
+    justify-content: center;
 
 }
