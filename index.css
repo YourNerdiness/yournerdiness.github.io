@@ -4,16 +4,28 @@
 
 }
 
+#output {
+
+    color: white;
+
+}
+
+.center, aside, section {
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
 html {
 
     background-color: rgb(75, 0, 75);
 
 }
 
-.center {
+button {
 
-    display: flex;
-
-    justify-content: center;
+    color: rgb(150, 0, 150);
 
 }

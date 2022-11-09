@@ -6,16 +6,61 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Flagle</title>
+        <title>Flagle - Guess The Flag</title>
 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
         <link rel="stylesheet" href="index.css">
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+        <script src="index.js"></script>
+
 
     </head>
 
     <body>
 
-        <h1 class="center" id="title">FLAGLE</h1>
+        <h1 id="title" class="center">FLAGLE</h1>
+
+        <aside>
+
+            <div id="flagDiv">
+
+                <img id="flag" class="center" width="240px" height="135px">
+
+            </div>
+
+        </aside>
+
+        <br>
+
+        <section>
+
+            <div id="guessingDiv">
+
+                <form>
+
+                    <select id="g0" class="guess operator"></select>
+                    <select id="g1" class="guess operator"></select>
+                    <select id="g2" class="guess operator"></select>
+                    <select id="g3" class="guess operator"></select>
+                    <select id="g4" class="guess operator"></select>
+                    <select id="g5" class="guess operator"></select>
+
+
+                </form>
+
+                <button id="guess" onclick="guess();">Guess</button>
+                <button id="next" onclick="next();">Next</button>
+    
+            </div>
+
+        </section>
+
+        <h2 id="output" class="center"></h2>
+
+        <script>init()</script>
     
     </body>
 
