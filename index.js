@@ -200,6 +200,7 @@ const countryCodeToName = {
     "SM" : "San Marino",
     "ST" : "Sao Tome And Principe",
     "SA" : "Saudi Arabia",
+    "GB-SCT" : "Scotland",
     "SN" : "Senegal",
     "RS" : "Serbia",
     "SC" : "Seychelles",
@@ -291,8 +292,8 @@ function guess() {
 
         document.getElementById("output").textContent = "Correct!!!"
 
-        document.getElementById("next").disabled = false;
-        document.getElementById("guess").disabled = true;
+        document.getElementById("nextButton").disabled = false;
+        document.getElementById("guessButton").disabled = true;
 
     }
 
@@ -308,8 +309,8 @@ function guess() {
 
         document.getElementById("output").textContent = country
 
-        document.getElementById("next").disabled = false;
-        document.getElementById("guess").disabled = true;
+        document.getElementById("nextButton").disabled = false;
+        document.getElementById("guessButton").disabled = true;
 
     }
 
@@ -339,8 +340,8 @@ function shiftGuessFields() {
 
 function next() {
 
-    document.getElementById("next").disabled = true;
-    document.getElementById("guess").disabled = false;
+    document.getElementById("nextButton").disabled = true;
+    document.getElementById("guessButton").disabled = false;
 
     document.getElementById("output").textContent = ""
 
