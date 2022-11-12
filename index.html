@@ -11,13 +11,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
         <link rel="stylesheet" href="index.css">
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="index.js"></script>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous">
-
 
     </head>
 
@@ -37,50 +31,53 @@
 
         <br>
 
-        <p>(Note that you can just start typing after clicking on the guess field, you won't see it but it will search)</p>
-
         <section>
 
             <div id="guessingDiv">
 
                 <form>
 
-                    <select id="g0" class="guess">
+                    <div>
 
-                        <option value="" selected hidden></option>
+                        <input id="g0" class="guessG" type="text" onkeydown="searchForGuess();">
+                        <select id="s0" class="guessS"></select>
 
-                    </select>
+                    </div>
 
-                    <select id="g1" class="guess">
+                    <div>
 
-                        <option value="" selected hidden></option>
+                        <input id="g1" class="guessG" type="text">
+                        <select id="s1" class="guessS"></select>
+                    
+                    </div>
 
-                    </select>
+                    <div>
 
-                    <select id="g2" class="guess">
+                        <input id="g2" class="guessG" type="text">
+                        <select id="s2" class="guessS"></select>
+                    
+                    </div>
 
-                        <option value="" selected hidden></option>
+                    <div>
+                        
+                        <input id="g3" class="guessG" type="text">
+                        <select id="s3" class="guessS"></select>
+                    
+                    </div>
 
-                    </select>
+                    <div>
 
-                    <select id="g3" class="guess">
+                        <input id="g4" class="guessG" type="text">
+                        <select id="s4" class="guessS"></select>
+                    
+                    </div>
 
-                        <option value="" selected hidden></option>
-
-                    </select>
-
-                    <select id="g4" class="guess">
-
-                        <option value="" selected hidden></option>
-
-                    </select>
-
-                    <select id="g5" class="guess">
-
-                        <option value="" selected hidden></option>
-
-                    </select>
-
+                    <div>
+                        
+                        <input id="g5" class="guessG" type="text">
+                        <select id="s5" class="guessS"></select>
+                    
+                    </div>
 
                 </form>
 
