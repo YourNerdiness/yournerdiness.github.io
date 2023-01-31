@@ -290,7 +290,7 @@ function init() {
 
 function stringDifference(str1, str2) {
 
-    console.log(str1, str2, ((str2 || "").match(new RegExp(str1, "giu")) || []).length);
+    console.log(str1, str2, ((str2 || "").match(new RegExp("[" + str1 + "]", "gi")) || []).length);
 
     return ((str2 || "").match(new RegExp(str1, "giu")) || []).length;
 
