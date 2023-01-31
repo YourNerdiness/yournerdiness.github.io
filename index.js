@@ -290,19 +290,13 @@ function init() {
 
 function stringDifference(str1, str2) {
 
-    console.log(str1);
-    console.log(str2);
-    console.log(((str2 || "").match(new RegExp("[" + str1 + "]", "gi")) || []).length);
-
-    return ((str2 || "").match(new RegExp("[" + str1 + "]", "giu")) || []).length;
+    return (((str2 || "").match(new RegExp("[" + str1 + "]", "giu")) || []).length)/str2.length;
 
 }
 
 function searchForGuess() {
 
     let currentGuess = document.getElementById("g" + current).value;
-
-    console.log(currentGuess);
 
     let maxMatch = 0;
     let selectedCountry = "";
