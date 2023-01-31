@@ -300,6 +300,8 @@ function searchForGuess() {
 
     let currentGuess = document.getElementById("g" + current).value;
 
+    console.log(currentGuess);
+
     let maxMatch = 0;
     let selectedCountry = "";
 
