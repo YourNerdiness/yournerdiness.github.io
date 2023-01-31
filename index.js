@@ -290,36 +290,7 @@ function init() {
 
 function stringDifference(str1, str2) {
 
-    if (str1.length == 0) return str2.length;
-    if (str2.length == 0) return str1.length;
-
-    let distance = 0;
-
-    if (str1.length < str2.length) {
-
-        distance = str2.length - str1.length;
-
-        for (let i = 0; i < str1.length; i++) {
-
-            if (str1[i] != str2[i]) distance++;
-            
-        }
-
-    }
-
-    else {
-
-        distance = str1.length - str2.length;
-
-        for (let i = 0; i < str2.length; i++) {
-
-            if (str1[i] != str2[i]) distance++;
-            
-        }
-
-    }
-
-    return distance;
+    return ((str2 || "").match("/[" + str1 + "]/gi") || []).length
 
 }
 
@@ -327,21 +298,27 @@ function searchForGuess() {
 
     let currentGuess = document.getElementById("g" + current).value;
 
-    let minMatch = 1000;
+    let maxMatch = 0;
     let selectedCountry = "";
 
     for (let i = 0; i < countries.length; i++) {
 
-        closeness = stringDifference(countries[i], currentGuess);
+        if (currentGuess == countries[i]) {
 
-        if (closeness < minMatch) {
-
-            minMatch = closeness;
             selectedCountry = countries[i];
+
+            break;
 
         }
 
-        if (minMatch == 0) break;
+        closeness = stringDifference(countries[i], currentGuess);
+
+        if (closeness > maxMatch) {
+
+            maxMatch = closeness;
+            selectedCountry = countries[i];
+
+        }
 
     }
 
